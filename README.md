@@ -1,5 +1,6 @@
 # cod_1
 import 'package:flutter/material.dart';
+import 'package:meuapp/mycard.dart';
 
 const Color darkBlue = Color.fromARGB(255, 18, 32, 47);
 
@@ -21,7 +22,15 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Center(
-          child: MyWidget(),
+          child: ListView(
+            children: <Widget>[
+              MyCard(
+                name: "Alef",
+                phone: "1198352-7415",
+                gmail: "hahaha@gmail.com",
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -35,3 +44,4 @@ class MyWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: <Widget>[]);
   }
 }
+
